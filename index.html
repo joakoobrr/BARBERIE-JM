@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en"
+<head>
+  <meta
+  charset="UTF-8"
+  <meta
+  http-equiv="X-UA-Compatible"
+  content="IE=edge">
+  <meta
+  name="Viewport"
+  content="width=device-width,initial-scale=1.0">
+  <title>Barberie JM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+
+  <div class="wrap">
+  <div class="wrap-texto">
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reservá tu turno | Barberie JM</title>
+  <style>
+    :root {
+      --primary-color: #2c3e50;
+      --accent-color: #bc1818;
+      --background: #ecf0f1;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: var(--background);
+    }
+
+    .container {
+      max-width: 300px;
+      margin: 60px auto;
+      background-color: rgb(185, 178, 178);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+
+    p.subtitle {
+      text-align: center;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    label {
+      font-weight: 600;
+      margin-top: 15px;
+      display: block;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 15px;
+      background-color: var(--accent-color);
+      border: none;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #b11e1e;
+    }
+
+    .success-message {
+      display: none;
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 6px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Agendá tu turno</h1>
+    <p class="subtitle">Reservá tu lugar en Barberie JM</p>
+<head>
+  <meta charset="UTF-8">
+  <title>Botón Inspirador</title>
+  <style>
+    .boton-inspirador {
+      background-color: rgb(156, 15, 15);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .boton-inspirador:hover {
+      background-color: darkred;
+    }
+  </style>
+</head>
+<body>
+<a href="mostrador.html" class="boton-inspirador">Inspírate con nuestros cortes</button>
+</a>
+ 
+</body>
+    <form id="form-turno">
+      <label for="nombre">Nombre completo </label>
+      <input type="text" id="nombre" required>
+
+      <label for="telefono">Teléfono </label>
+      <input type="tel" id="telefono" placeholder="Ej: 11 1234 5678" required pattern="[0-9 ]{8,15}">
+
+      <label for="fecha">Fecha </label>
+      <input type="date" id="fecha" required min="<?= date('Y-m-d'); ?>">
+
+      <label for="hora">Hora </label>
+      <select id="hora" required>
+        <option value="">Seleccioná una hora</option>
+        <option value="09:00">09:00</option>
+        <option value="10:00">10:00</option>
+        <option value="11:00">11:00</option>
+        <option value="12:00">12:00</option>
+        <option value="14:00">14:00</option>
+        <option value="15:00">15:00</option>
+        <option value="16:00">16:00</option>
+        <option value="17:00">17:00</option>
+      </select>
+
+      <label for="servicio">Servicio </label>
+      <select id="servicio" required>
+        <option value="">Elegí un servicio</option>
+        <option value="Corte de cabello">Corte de cabello</option>
+        <option value="Corte y barba">Corte + barba</option>
+        <option value="Afeitado">Afeitado</option>
+      </select>
+<head>
+      <button type="submit">Reservar Turno</button>
+      <head>
+    </form>
+    <div class="success-message" id="mensaje">
+      ¡Gracias! Tu turno fue agendado correctamente.
+      <head>
+    </div>
+  </div>
+
+  <div class="footer">
+    © 2025 Barberíe JM
+  </div>
+
+  <script>
+    const formulario = document.getElementById("form-turno");
+    const mensaje = document.getElementById("mensaje");
+
+    formulario.addEventListener("submit", function(event) {
+      event.preventDefault(); // evita que se recargue la página
+
+      // Validar campos manualmente si querés más control
+      const nombre = document.getElementById("nombre").value.trim();
+      const telefono = document.getElementById("telefono").value.trim();
+      const fecha = document.getElementById("fecha").value;
+      const hora = document.getElementById("hora").value;
+      const servicio = document.getElementById("servicio").value;
+
+      if (!nombre || !telefono || !fecha || !hora || !servicio) {
+        alert("Por favor completá todos los campos.");
+        return;
+      }
+
+      // Acá podrías enviar los datos a un servidor con fetch/AJAX
+      // Ejemplo de simulación de éxito:
+      mensaje.style.display = "block";
+      formulario.reset();
+    });
+  </script>
+</body>
+</html>
+

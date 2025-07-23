@@ -1,0 +1,17 @@
+.wrap{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(to bottom, rgb( 0 0 0 / .75),  rgb( 0 0 0 / .75)),url(imagen.webp);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.wrap-texto{
+    color: aliceblue;
+    text-align: center;
+    width: 100%;
+}
